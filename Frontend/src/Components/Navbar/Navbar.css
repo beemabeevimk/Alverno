@@ -1,0 +1,70 @@
+.nav-main{
+    width: 100%;
+    height: 100px;
+    /* background: aqua; */
+}
+
+.nav-1{
+    width: 100%;
+    height: 54px;
+    /* background: red;   */
+}
+
+.nav-2{
+  display: flex;
+  justify-content: end;
+align-items: center;
+
+    width: 100%;
+    height: 40px;
+    background:#B11B44;
+    text-align: left;
+}
+
+.logo{
+    width: 70px;
+    height: 40px;
+    padding-top: 14px;
+    padding-left: 17px;
+}
+
+.logo img{
+    width: 70px;
+    height: 40px;
+}
+
+
+.nav-options ul{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: max-content;
+  list-style-type: none;
+  height: 100%;
+  }
+  
+.nav-options li {
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+  
+    display: inline; /* Display list items horizontally */
+    margin-right: 40px; /* Adjust the spacing between list items */
+  }
+
+.nav-options li:hover {
+  height: 100px;
+    display: inline; /* Display list items horizontally */
+    margin-right: 40px; /* Adjust the spacing between list items */
+    
+  }
+
+.nav-options a {
+    text-decoration: none;
+    color: white;
+  } 
+
+.nav-options a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+
