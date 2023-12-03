@@ -23,17 +23,29 @@ class AccountManager(BaseUserManager):  # custom manager
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, username,email, password=None):
+    def create_superuser(self, username,email, password=None , **extra_fields):
+        extra_fields.setdefault('role', 'admin')
+        # extra_fields.setdefault('phone_number', None)
         user = self.create_user(username, email, password=password)
+        user.is_admin = True
         user.is_staff = True
         user.is_superuser = True
         user.save(using=self._db)   
         return user
     
+
+class Role(models.TextChoices):
+    STUDENT = 'student', 'Student'
+    STAFF = 'staff', 'Staff'
+    ADMIN = 'admin', 'Admin'    
+
+    
 class CustomUser(AbstractUser):
     username = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
-    role = models.CharField(max_length=20, default='student')  #  'student', 'staff', 'admin'
+    
+    role = models.CharField(max_length=20, choices=Role.choices)  #  'student', 'staff', 'admin'
+    # role = models.CharField(max_length=20, default=Role.STUDENT)
     phone_number = models.CharField(max_length=15,default='')
 
     def __str__(self):

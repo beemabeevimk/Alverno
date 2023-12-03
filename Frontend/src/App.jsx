@@ -1,18 +1,31 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
 import './App.css'
-import LoginSignup from './Components/LoginSignup/LoginSignup'
-import Navbar from './Components/Navbar/Navbar'
-import SignupPage from './Components/SignupPage/SignupPage'
+import router from './Components/Routers/Routes'
+import { BrowserRouter, Route, RouterProvider, Routes} from "react-router-dom";
+import Sidebar from './Components/Sidebar';
+import Profile from './pages/StudentSide/Profile';
+import Course from './pages/StudentSide/Course';
+import Timetable from './pages/StudentSide/Timetable';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar/>
-      <SignupPage/>
-      {/* <LoginSignup/> */}
+
+    <BrowserRouter>
+     <Sidebar>
+        <Routes>
+          <Route path="/"element={<Profile/>}/>
+          <Route path="/profile"element={<Profile/>}/>
+          <Route path="/course"element={<Course/>}/>
+          <Route path="/timetable"element={<Timetable/>}/>
+        </Routes>
+     </Sidebar>
+    </BrowserRouter>
+
+    {/* <RouterProvider router={router} />  */}
+      
     </>
   )
 }

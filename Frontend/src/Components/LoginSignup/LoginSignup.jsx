@@ -1,13 +1,17 @@
 import React from 'react'
 import './LoginSignup.css'
+import { Link } from 'react-router-dom'
 
 import user_icon from '../Assets/user3.png'
 import email_icon from '../Assets/email2.png'
 import password_icon from '../Assets/pass4.png'
 import phone_icon from '../Assets/phone.png'
+import Navbar from '../Navbar/Navbar'
 
 const LoginSignup = () => {
   return (
+    <>
+   
     <div className='container'>
       <div className='header'>
          <div className="text">SignUp</div>
@@ -33,10 +37,11 @@ const LoginSignup = () => {
       </div>
       <div className="login-with-otp">Or Login with OTP <span>Click Here!</span></div>
       <div className="submit-container">
-        <div className="submit">Sign Up</div>
-        <div className="submit">Login</div>
+      <Link to="/signup"><div className="submit">Sign Up</div></Link>
+        <div className="submit gray">Login</div>
       </div>
       </div>
+      </>
   )
 }
 

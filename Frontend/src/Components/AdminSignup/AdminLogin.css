@@ -1,0 +1,125 @@
+body {
+    height: 100%;
+    
+   
+  }
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 490px;
+    background: #B11B44;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow effect */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;
+    height: 450px;
+    background: #fff;
+    padding-bottom: 30px;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a box shadow effect */
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.text{
+    color: #B11B44;
+    font-size: 33px;
+    font-weight: 700;
+}
+
+.underline{
+    width: 60px;
+    height: 4px;
+    background: #B11B44;
+    border-radius: 9px;
+}
+
+.inputs{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 300px;
+    height: 45px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.input img{
+    margin: 0px 30px;
+    width: 20px;
+}
+
+.input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 13px;
+}
+
+.login-with-otp{
+    padding-left: 115px;
+    margin-top: 17px;
+    color: #797979;
+    font-size: 14px;
+}
+
+.login-with-otp span{
+    color: #B11B44;
+    cursor: pointer;
+}
+
+.submit-container{
+    display: flex;
+    gap: 30px;
+    margin: 20px 80px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 29px;
+    color: #fff;
+    background: #B11B44;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.gray{
+    background: #EAEAEA;
+    color: #676767;
+}
+
+
+
+  
