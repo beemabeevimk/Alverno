@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import router from './Components/Routers/Routes'
+// import router from './Components/Routers/Routes'
 import { BrowserRouter, Route, RouterProvider, Routes} from "react-router-dom";
 import Sidebar from './Components/Sidebar';
 import Profile from './pages/StudentSide/Profile';

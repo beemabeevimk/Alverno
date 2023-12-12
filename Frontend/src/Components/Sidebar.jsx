@@ -1,18 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
 import { FaTh, FaUserAlt, FaCommentAlt, FaBars } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 
-export default function Sidebar() {
+export default function Sidebar({children}) {
+  const [isOpen, setIsOpen] = useState()
   const menuItem = [
     {
       path:"/",
       name:"Profile",
-      icon:<FaTh/>
+      icon:<FaUserAlt/>
     },
     {
       path:"/profile",
       name:"Profile",
-      icon:<FaTh/>
+      icon:<FaUserAlt/>
     },
     {
       path:"/course",
@@ -37,11 +39,13 @@ export default function Sidebar() {
           {
             menuItem.map((item, index)=>(
               <NavLink to={item.path} key={index} className="link" activeclassName="active">
-                
+                <div className="icon">{item.icon}</div>
+                <div className="link_text">{item.name}</div>
               </NavLink>
             ))
           }     
-       </div>
+      </div>
+        <main>{children}</main>
     </div>
   );
 }
