@@ -52,8 +52,9 @@
  .sidebar{
   background: #000;
   color: #fff;
-  height: 100vh;
+  height: 100max;
   width: 300px;
+  transition: all 0.5s;
  }
 
  .top_section{
@@ -74,6 +75,7 @@
 
  .link{
   display: flex;
+  align-items: center;
   color: #fff;
   padding: 10px 15px;
   gap: 15px;
